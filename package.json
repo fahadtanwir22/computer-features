@@ -1,0 +1,20 @@
+{
+  "name": "cloudtek_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server-dependencies": "npm install --prefix server",
+    "client-dependencies": "npm install --prefix client",
+    "install-all-deps": "npm install && concurrently \"npm run server-dependencies\" \"npm run client-dependencies\"",
+    "server-run": "npm run start --prefix server",
+    "client-run": "npm start --prefix client",
+    "start-project": "concurrently \"npm run server-run\" \"npm run client-run\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^7.3.0"
+  }
+}
